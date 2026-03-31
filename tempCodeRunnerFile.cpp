@@ -32,3 +32,15 @@ void input()
     }
 }
 
+void insertionSort() {
+    int i, temp, j;
+    for (i = 1; i <= n - 1; i++) { // i adalah pass
+        temp = arr[i]; // step 1
+        j = i - 1; // step 2
+        while (j >= 0 && arr[j] > temp) { // step 3
+            arr[j + 1] = arr[j]; // step 4
+            j--; // step 5
+        }
+        arr[j + 1] = temp; // step 6
+    }
+}
